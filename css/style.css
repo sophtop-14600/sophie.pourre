@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bento-card {
+    border-radius: 2rem;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px -12px rgba(57, 81, 68, 0.2);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+}
+
+.icon-wrap {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.menu-text {
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover .menu-text {
+    max-width: 120px;
+    opacity: 1;
+    margin: 0 1rem;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

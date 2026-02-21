@@ -1,0 +1,132 @@
+const translations = {
+    fr: {
+        title: "Learning Experience Designer",
+        search_placeholder: "RECHERCHER...",
+        lang_level: "ANGLAIS BILINGUE",
+        experience_years: "20+ ANS D'EXPÉRIENCE",
+        availability: "Disponible Immédiatement",
+        menu_top: "Haut",
+        menu_search: "Recherche",
+        menu_lang: "Langue",
+        menu_contact: "Contact",
+        tab_all: "Tout",
+        tab_exp: "Expériences",
+        tab_edu: "Diplômes",
+        tab_skills: "Compétences",
+        
+        module_01_title: "Expériences",
+        module_03_title: "Diplômes",
+        
+        michelin_dates: "2021 - PRÉSENT",
+        michelin_enterprise: "Michelin Connected Fleet",
+        michelin_town: "Val de Reuil",
+        michelin_job: "Designer eLearning",
+        
+        safran_dates: "2019 - 2020",
+        safran_enterprise: "Safran Nacelles",
+        safran_town: "Le Havre",
+        safran_job: "Chef de Projets Documentaires",
+        
+        kubota_dates: "2015 - 2019",
+        kubota_enterprise: "Kubota Europe",
+        kubota_town: "Argenteuil",
+        kubota_job: "Concepteur Rédacteur Technique",
+        
+        nmj_dates: "2004 - 2014",
+        nmj_enterprise: "LGM Document Engineering",
+        nmj_town: "Montigny le Bretonneux",
+        nmj_job: "Responsable Projets en Assistance Technique",
+        
+        diderot_dates: "2009 - 2010",
+        diderot_enterprise: "Université Paris-Diderot",
+        diderot_town: "Paris 13",
+        diderot_job: "Enseignant Outils Logiciels",
+        
+        procotec_dates: "2001 - 2003",
+        procotec_enterprise: "Procotec",
+        procotec_town: "Osny",
+        procotec_job: "Concepteur P.A.O. & Multimédia",
+
+        skills_arch: "Ingénierie Pédagogique",
+        skills_arch_title: "Expertise Moodle",
+        skills_moodle: "Conception Michelin Connected Fleet Academy",
+        skills_genially: "Genially",
+        skills_graph: "Vidéo & Graphisme",
+        skills_adobe: "Adobe Creative Cloud",
+        skills_3d: "SolidWorks Composer (Modélisation 3D)",
+        skills_doc: "Outils Métier",
+        skills_fm_sap: "SAP, Microsoft 365",
+        skills_jira: "Jira (Agile)",
+        skills_ai: "Intelligence Artificielle",
+        skills_ai_tools: "Gemini & ChatGPT (Accélérateurs de Design)",
+        
+        edu_licence: "Licence III Rédaction Technique",
+        edu_graph: "Graphisme & P.A.O.",
+        edu_lettres: "DEUG Lettres Modernes"
+    },
+    en: {
+        title: "Learning Experience Designer",
+        search_placeholder: "SEARCH...",
+        lang_level: "BILINGUAL ENGLISH",
+        experience_years: "20+ YEARS EXP.",
+        availability: "Available Now",
+        menu_top: "Top",
+        menu_search: "Search",
+        menu_lang: "Lang",
+        menu_contact: "Contact",
+        tab_all: "All",
+        tab_exp: "Experience",
+        tab_edu: "Degrees",
+        tab_skills: "Skills",
+        
+        module_01_title: "Experience",
+        module_03_title: "Degrees",
+        
+        michelin_dates: "2021 - PRESENT",
+        michelin_enterprise: "Michelin Connected Fleet",
+        michelin_town: "Val de Reuil",
+        michelin_job: "E-learning Designer",
+        
+        safran_dates: "2019 - 2020",
+        safran_enterprise: "Safran Nacelles",
+        safran_town: "Le Havre",
+        safran_job: "Project Manager",
+        
+        kubota_dates: "2015 - 2019",
+        kubota_enterprise: "Kubota Europe",
+        kubota_town: "Argenteuil",
+        kubota_job: "Technical Writing Designer",
+        
+        nmj_dates: "2004 - 2014",
+        nmj_enterprise: "LGM Document Engineering",
+        nmj_town: "Montigny le Bretonneux",
+        nmj_job: "Technical Assistance Project Manager",
+        
+        diderot_dates: "2009 - 2010",
+        diderot_enterprise: "Université Paris-Diderot",
+        diderot_town: "Paris 13",
+        diderot_job: "Software Tools Instructor",
+        
+        procotec_dates: "2001 - 2003",
+        procotec_enterprise: "Procotec",
+        procotec_town: "Osny",
+        procotec_job: "DTP & Multimedia Designer",
+
+        skills_arch: "Instructional Design",
+        skills_arch_title: "Moodle Expertise",
+        skills_moodle: "Michelin Connected Fleet Academy Design",
+        skills_genially: "Genially",
+        skills_graph: "Video & Graphic Design",
+        skills_adobe: "Adobe CC",
+        skills_3d: "SolidWorks Composer (3D)",
+        skills_doc: "Business Tools",
+        skills_fm_sap: "SAP, Microsoft 365",
+        skills_jira: "Jira (Agile)",
+        skills_ai: "Artificial Intelligence",
+        skills_ai_tools: "Gemini & ChatGPT (Design Accelerators)",
+        
+        edu_licence: "Bachelor's in Technical Writing",
+        edu_graph: "Graphic Design Certification",
+        edu_lettres: "Associate's in Literature"
+    }
+};
