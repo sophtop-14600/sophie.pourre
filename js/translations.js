@@ -43,6 +43,15 @@ const translations = {
         skills_ai: "Intelligence Artificielle",
         skills_ai_tools: "Prompt Engineering avancé & intégration des flux IA (Gemini, ChatGPT) dans la conception pédagogique.",
 
+        // Portfolio
+        portfolio_title: "Portfolio Confidentiel",
+        portfolio_subtitle: "Accessible recruteur seulement — Protection par mot de passe",
+        portfolio_desc: "Découvrez des extraits concrets de mes conceptions e-learning, modules interactifs, et architectures documentaires.",
+        pwd_placeholder: "Saisir le mot de passe...",
+        pwd_required: "Mot de passe obligatoire",
+        pwd_incorrect: "Mot de passe incorrect",
+        portfolio_modal_title: "Galerie de Projets",
+
         // Expériences (Titres & Dates)
         michelin_enterprise: "Michelin Connected Fleet",
         michelin_dates: "2021 - PRÉSENT",
@@ -144,6 +153,15 @@ const translations = {
         // AI Block
         skills_ai: "Artificial Intelligence",
         skills_ai_tools: "Advanced Prompt Engineering & integration of AI workflows (Gemini, ChatGPT) into instructional design.",
+
+        // Portfolio
+        portfolio_title: "Confidential Portfolio",
+        portfolio_subtitle: "Recruiter access only — Password protected",
+        portfolio_desc: "Discover concrete samples of my e-learning designs, interactive modules, and documentation architectures.",
+        pwd_placeholder: "Enter password...",
+        pwd_required: "Password is required",
+        pwd_incorrect: "Incorrect password",
+        portfolio_modal_title: "Projects Gallery",
 
         // Expériences (Titres & Dates)
         michelin_enterprise: "Michelin Connected Fleet",

@@ -22,6 +22,61 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// LOGIQUE DU PORTFOLIO
+function unlockPortfolio() {
+    const input = document.getElementById('portfolio-pwd');
+    const error = document.getElementById('pwd-error');
+    const modal = document.getElementById('portfolio-modal');
+    const modalContent = document.getElementById('portfolio-content');
+    
+    // Mots de passe valides (en minuscules pour faciliter la vérification)
+    const validPasswords = ['recruteur', 'portfolio', 'lxdesign', 'sophie'];
+    const val = input.value.trim().toLowerCase();
+    
+    if (!val) {
+        error.textContent = translations[currentLang]['pwd_required'];
+        error.classList.remove('hidden');
+        input.parentElement.classList.add('shake', 'border-red-500');
+        setTimeout(() => input.parentElement.classList.remove('shake'), 400);
+        return;
+    }
+
+    if (validPasswords.includes(val)) {
+        // Succès
+        error.classList.add('hidden');
+        input.parentElement.classList.remove('border-red-500');
+        input.value = ''; 
+        
+        // Affichage fluide du Modal
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        void modal.offsetWidth; // Force le reflow pour que l'animation CSS se joue
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+    } else {
+        // Erreur
+        error.textContent = translations[currentLang]['pwd_incorrect'];
+        error.classList.remove('hidden');
+        input.parentElement.classList.add('shake', 'border-red-500');
+        setTimeout(() => input.parentElement.classList.remove('shake'), 400);
+    }
+}
+
+function closePortfolio() {
+    const modal = document.getElementById('portfolio-modal');
+    const modalContent = document.getElementById('portfolio-content');
+    
+    modal.classList.add('opacity-0');
+    modalContent.classList.remove('scale-100');
+    modalContent.classList.add('scale-95');
+    
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }, 300); // Doit correspondre à la durée de transition CSS
+}
+
 function toggleDetails(id, btn) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -94,98 +149,6 @@ function updateProgressBar() {
     if (progressBar) progressBar.style.width = scrolled + "%";
 }
 
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function goToSection(category) {
-    const map = {
-        all: null,
-        experience: 'experience',
-        education: 'education',
-        skills: 'moodle'
-    };
-    const targetId = map[category];
-
-    const tabs = document.querySelectorAll('.tab-btn');
-    const activeClasses = ['bg-[#395144]', 'text-white', 'shadow-md'];
-    const inactiveClasses = ['text-[#395144]/60', 'hover:text-[#395144]', 'hover:bg-white/40'];
-    tabs.forEach(tab => {
-        if (tab.getAttribute('data-tab') === category) {
-            tab.classList.remove(...inactiveClasses);
-            tab.classList.add(...activeClasses);
-        } else {
-            tab.classList.remove(...activeClasses);
-            tab.classList.add(...inactiveClasses);
-        }
-    });
-
-    if (!targetId) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-    }
-    const el = document.getElementById(targetId);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function closeSearch(clearResults = true) {
-    const overlay = document.getElementById('search-overlay');
-    const input = document.getElementById('search-input');
-    overlay.classList.add('opacity-0');
-    setTimeout(() => {
-        overlay.classList.add('hidden');
-        overlay.classList.remove('flex');
-        if (clearResults) {
-            input.value = '';
-            searchContent('');
-        }
-    }, 300);
-}
-
-function toggleSearch() {
-    const overlay = document.getElementById('search-overlay');
-    if (overlay.classList.contains('hidden')) {
-        overlay.classList.remove('hidden');
-        overlay.classList.add('flex');
-        setTimeout(() => {
-            overlay.classList.remove('opacity-0');
-            document.getElementById('search-input').focus();
-        }, 10);
-    } else {
-        closeSearch();
-    }
-}
-
-function toggleLang() {
-    currentLang = currentLang === 'fr' ? 'en' : 'fr';
-    localStorage.setItem('preferredLang', currentLang);
-    updateUIContent();
-}
-
-function updateUIContent() {
-    document.querySelectorAll('[data-key]').forEach(elem => {
-        const key = elem.getAttribute('data-key');
-        if (translations[currentLang] && translations[currentLang][key]) {
-            elem.textContent = translations[currentLang][key];
-        }
-    });
-    const input = document.getElementById('search-input');
-    if (input && translations[currentLang]['search_placeholder']) {
-        input.placeholder = translations[currentLang]['search_placeholder'];
-    }
-    const langBtnText = document.getElementById('lang-btn-text');
-    if (langBtnText) langBtnText.textContent = currentLang === 'fr' ? 'EN' : 'FR';
-}
-
-function searchContent(query) {
-    const filter = query.toLowerCase();
-    const cards = document.querySelectorAll('.searchable');
-    cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(filter) ? "" : "none";
-    });
-}
-
 function filterSection(category) {
     const cards = document.querySelectorAll('.bento-card');
     const tabs = document.querySelectorAll('.tab-btn');
@@ -219,4 +182,41 @@ function filterSection(category) {
     });
     
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleLang() {
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    localStorage.setItem('preferredLang', currentLang);
+    updateUIContent();
+}
+
+function updateUIContent() {
+    document.querySelectorAll('[data-key]').forEach(elem => {
+        const key = elem.getAttribute('data-key');
+        if (translations[currentLang] && translations[currentLang][key]) {
+            elem.textContent = translations[currentLang][key];
+        }
+    });
+    
+    const searchInput = document.getElementById('search-input');
+    if (searchInput && translations[currentLang]['search_placeholder']) {
+        searchInput.placeholder = translations[currentLang]['search_placeholder'];
+    }
+    
+    const pwdInput = document.getElementById('portfolio-pwd');
+    if (pwdInput && translations[currentLang]['pwd_placeholder']) {
+        pwdInput.placeholder = translations[currentLang]['pwd_placeholder'];
+    }
+
+    const langBtnText = document.getElementById('lang-btn-text');
+    if (langBtnText) langBtnText.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+}
+
+function searchContent(query) {
+    const filter = query.toLowerCase();
+    const cards = document.querySelectorAll('.searchable');
+    cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(filter) ? "" : "none";
+    });
 }

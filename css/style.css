@@ -78,6 +78,17 @@ body {
 .rotate-y-180 { transform: rotateY(180deg); }
 .value-card.active .value-inner { transform: rotateY(180deg); }
 
+/* Erreur Mot de passe (Shake) */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
 .linkedin-zoom-btn {
     animation: linkedin-zoom 2.5s infinite ease-in-out;
     display: inline-block;
