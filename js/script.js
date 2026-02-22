@@ -4,7 +4,41 @@ document.addEventListener('DOMContentLoaded', () => {
     updateUIContent();
     setupEventListeners();
     updateProgressBar();
+    
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, { threshold: 0.6, rootMargin: "-10% 0px -10% 0px" });
+        revealElements.forEach(el => observer.observe(el));
+    } else {
+        revealElements.forEach(el => el.classList.add('active'));
+    }
 });
+
+function toggleDetails(id, btn) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const isHidden = el.classList.contains('hidden');
+    el.classList.toggle('hidden');
+    const textDetails = translations[currentLang]['details_button'] || 'Détails';
+    const textLess = translations[currentLang]['less_button'] || 'Moins';
+    if (isHidden) {
+        btn.querySelector('span').textContent = textLess;
+        btn.querySelector('i').classList.remove('fa-plus-circle');
+        btn.querySelector('i').classList.add('fa-minus-circle');
+    } else {
+        btn.querySelector('span').textContent = textDetails;
+        btn.querySelector('i').classList.remove('fa-minus-circle');
+        btn.querySelector('i').classList.add('fa-plus-circle');
+    }
+}
 
 function setupEventListeners() {
     const searchInput = document.getElementById('search-input');
@@ -73,7 +107,6 @@ function goToSection(category) {
     };
     const targetId = map[category];
 
-    // Update visual state of tabs
     const tabs = document.querySelectorAll('.tab-btn');
     const activeClasses = ['bg-[#395144]', 'text-white', 'shadow-md'];
     const inactiveClasses = ['text-[#395144]/60', 'hover:text-[#395144]', 'hover:bg-white/40'];
@@ -137,7 +170,9 @@ function updateUIContent() {
         }
     });
     const input = document.getElementById('search-input');
-    if (input) input.placeholder = translations[currentLang]['search_placeholder'];
+    if (input && translations[currentLang]['search_placeholder']) {
+        input.placeholder = translations[currentLang]['search_placeholder'];
+    }
     const langBtnText = document.getElementById('lang-btn-text');
     if (langBtnText) langBtnText.textContent = currentLang === 'fr' ? 'EN' : 'FR';
 }
@@ -149,35 +184,6 @@ function searchContent(query) {
         const text = card.innerText.toLowerCase();
         card.style.display = text.includes(filter) ? "" : "none";
     });
-}
-
-function filterSection(category) {
-    const cards = document.querySelectorAll('.bento-card');
-    const tabs = document.querySelectorAll('.tab-link');
-
-    // Mise à jour visuelle des onglets
-    tabs.forEach(tab => {
-        tab.classList.toggle('active', tab.getAttribute('data-tab') === category);
-    });
-
-    // Filtrage des cartes
-    cards.forEach(card => {
-        if (category === 'all') {
-            card.style.display = "block";
-            card.style.opacity = "1";
-        } else {
-            if (card.classList.contains(`cat-${category}`)) {
-                card.style.display = "block";
-                card.style.opacity = "1";
-            } else {
-                card.style.display = "none";
-                card.style.opacity = "0";
-            }
-        }
-    });
-    
-    // Retour en haut de la grille pour le confort utilisateur
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function filterSection(category) {

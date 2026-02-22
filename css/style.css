@@ -3,6 +3,7 @@
 body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 
 .bento-card {
@@ -12,22 +13,79 @@ body {
 
 .bento-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 30px 60px -12px rgba(57, 81, 68, 0.15);
+    box-shadow: 0 30px 60px -12px rgba(57, 81, 68, 0.2);
 }
 
-/* Optimisation Mobile Barre Nav */
-@media (max-width: 640px) {
-    .tab-btn {
-        padding-left: 0.6rem !important;
-        padding-right: 0.6rem !important;
-        font-size: 8px !important;
-    }
+/* ----- FIX DU SAUT D'ÉCRAN (LAYOUT SHIFT) ----- */
+.scroll-reveal, .achievement-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.searchable {
-    transition: opacity 0.4s ease, transform 0.4s ease;
+.scroll-reveal.active, .achievement-card.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-iframe {
-    filter: contrast(1.1) brightness(1.1);
+.text-unroll {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.achievement-card.active .text-unroll {
+    clip-path: inset(0 0 0 0);
+}
+
+.text-unroll-inner {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-out;
+    transition-delay: 0.15s;
+}
+
+.achievement-card.active .text-unroll-inner {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* ---------------------------------------------- */
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-fast {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.5; }
+}
+.animate-pulse-fast {
+    animation: pulse-fast 1s infinite ease-in-out;
+}
+
+/* LX Quiz (Tiroir) */
+.quiz-card.active .quiz-back { transform: translateY(0); }
+.quiz-card.active .quiz-front { transform: translateY(-100%); }
+
+/* "Ce que j'apporte" (Effet Flip 3D) */
+.perspective-1000 { perspective: 1000px; }
+.preserve-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; }
+.rotate-y-180 { transform: rotateY(180deg); }
+.value-card.active .value-inner { transform: rotateY(180deg); }
+
+.linkedin-zoom-btn {
+    animation: linkedin-zoom 2.5s infinite ease-in-out;
+    display: inline-block;
+}
+
+@keyframes linkedin-zoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); text-shadow: 0 0 10px rgba(255,127,0,0.3); }
+}
+
+#progress-bar { box-shadow: 0 0 10px rgba(255, 127, 0, 0.5); }

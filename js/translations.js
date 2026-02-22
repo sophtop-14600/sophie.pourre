@@ -4,30 +4,40 @@ const translations = {
         tab_exp: "Expériences",
         tab_skills: "Expertises",
         tab_edu: "Diplômes",
-        title: "Learning Experience Designer",
+        title: "Learning & Knowledge Architect",
+        subtitle: "Digital Learning – LMS – Documentation Strategy",
         intro_quote: "Spécialiste de la conception pédagogique et de l'architecture documentaire avec plus de 20 ans d'expertise. Je transforme les informations techniques complexes en expériences d'apprentissage fluides, interactives et scalables.",
         experience_years: "20+ ANS D'EXPÉRIENCE",
         lang_level: "ANGLAIS BILINGUE (B2.3)",
-        availability: "Disponible Immédiatement",
+        availability: "À l'écoute d'opportunités",
         download_cv: "Consulter CV PDF",
         module_01_title: "Parcours Professionnel",
         module_03_title: "Formation & Diplômes",
         achievements_title: "Réalisations Clés",
         recommendations_title: "Témoignages & Recommandations",
         
-        // QCM / Quiz
-        qcm_title: "LX Quiz",
-        qcm_question: "Quelle est la durée d'attention moyenne d'un apprenant sur une vidéo e-learning ?",
-        qcm_answer: "Environ 6 minutes ! D'où l'importance de concevoir des modules en \"Micro-learning\" pour maintenir l'engagement et faciliter la rétention.",
-        qcm_hover: "Survolez pour la réponse",
-        
-        // Réalisations Clés
         ach_01: "Architecture de bases de connaissances HTML structurées pour l'assistance technique terrain.",
         ach_02: "Mise en œuvre de chaînes éditoriales pilotées par XML pour une documentation modulaire.",
         ach_03: "Ingénierie de parcours e-learning interactifs et administration avancée de plateformes Moodle.",
         ach_04: "Production de guides produits et manuels d'installation multisupports (Web Help & PDF).",
         ach_05: "Vulgarisation de concepts complexes via la création de supports 'One-Pager' didactiques.",
         ach_06: "Optimisation de la gestion de données techniques et génération automatique de listes de pièces.",
+
+        // Ce que j'apporte
+        value_title: "Ce que j'apporte",
+        value_front_text: "Découvrez ma valeur ajoutée en 5 points clés pour vos projets de formation et de documentation.",
+        value_hover: "Cliquez pour retourner",
+        value_1: "Structure et industrialise la production documentaire.",
+        value_2: "Transforme un LMS en outil stratégique.",
+        value_3: "Produit rapidement du contenu pédagogique structuré.",
+        value_4: "Facilite l’onboarding produit.",
+        value_5: "Capitalise le savoir d’équipe.",
+
+        // Quiz LX
+        qcm_title: "LX Quiz",
+        qcm_question: "Quelle est la différence entre l'e-learning traditionnel et le Learning Experience (LX) Design ?",
+        qcm_hover: "Cliquez pour la réponse",
+        qcm_answer: "Là où l'e-learning classique se concentre sur le contenu, le LX Design se concentre sur l'apprenant. Il vise à créer des expériences immersives, interactives et sans friction pour faciliter l'ancrage des compétences.",
 
         // IA Block
         skills_ai: "Intelligence Artificielle",
@@ -45,6 +55,8 @@ const translations = {
         kubota_enterprise: "Kubota Europe",
         kubota_dates: "2015 - 2019",
         kubota_job: "Concepteur Rédacteur Technique",
+            details_button: "Détails",
+            less_button: "Moins",
         
         nmj_enterprise: "LGM Document Engineering",
         nmj_dates: "2004 - 2014",
@@ -94,30 +106,40 @@ const translations = {
         tab_exp: "Experience",
         tab_skills: "Expertise",
         tab_edu: "Degrees",
-        title: "Learning Experience Designer",
+        title: "Learning & Knowledge Architect",
+        subtitle: "Digital Learning – LMS – Documentation Strategy",
         intro_quote: "Instructional design and documentation architecture specialist with 20+ years of expertise. I transform complex technical information into fluid, interactive, and scalable learning experiences.",
         experience_years: "20+ YEARS EXP.",
         lang_level: "BILINGUAL ENGLISH (B2.3)",
-        availability: "Available Now",
+        availability: "Open to opportunities",
         download_cv: "Download PDF CV",
         module_01_title: "Professional Path",
         module_03_title: "Education & Degrees",
         achievements_title: "Key Achievements",
         recommendations_title: "Testimonials & Recommendations",
 
-        // QCM / Quiz
-        qcm_title: "LX Quiz",
-        qcm_question: "What is the average attention span of a learner on an e-learning video?",
-        qcm_answer: "About 6 minutes! This is why designing \"Micro-learning\" modules is crucial to maintain engagement and retention.",
-        qcm_hover: "Hover for the answer",
-
-        // Réalisations Clés
         ach_01: "Architecture of structured HTML knowledge bases for field technical support.",
         ach_02: "Implementation of XML-driven editorial workflows for modular documentation.",
         ach_03: "Instructional design of interactive e-learning paths and Moodle administration.",
         ach_04: "Production of multi-channel product guides and installation manuals (Web Help & PDF).",
         ach_05: "Technical popularization through high-impact didactic 'One-Pager' designs.",
         ach_06: "Technical data management optimization and automatic spare parts list generation.",
+
+        // Ce que j'apporte
+        value_title: "What I Bring",
+        value_front_text: "Discover my added value in 5 key points for your training and documentation projects.",
+        value_hover: "Click to flip card",
+        value_1: "Structures and industrializes documentation production.",
+        value_2: "Transforms an LMS into a strategic tool.",
+        value_3: "Rapidly produces structured learning content.",
+        value_4: "Facilitates product onboarding.",
+        value_5: "Capitalizes on team knowledge.",
+
+        // Quiz LX
+        qcm_title: "LX Quiz",
+        qcm_question: "What is the difference between traditional e-learning and Learning Experience (LX) Design?",
+        qcm_hover: "Click for the answer",
+        qcm_answer: "Where traditional e-learning focuses on the content itself, LX Design is strictly learner-centric. It aims to build immersive, interactive, and frictionless experiences to boost skill retention.",
 
         // AI Block
         skills_ai: "Artificial Intelligence",
@@ -135,6 +157,8 @@ const translations = {
         kubota_enterprise: "Kubota Europe",
         kubota_dates: "2015 - 2019",
         kubota_job: "Technical Writing Designer",
+            details_button: "Details",
+            less_button: "Less",
         
         nmj_enterprise: "LGM Document Engineering",
         nmj_dates: "2004 - 2014",
