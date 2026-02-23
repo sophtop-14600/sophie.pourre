@@ -9,8 +9,60 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        #startup-overlay { z-index: 9999; }
+        .perspective-1000 { perspective: 1000px; }
+        .folder-front {
+            transform-style: preserve-3d;
+            transform-origin: bottom center;
+            animation: openFolder 0.6s 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        .intro-paper {
+            opacity: 0;
+            transform-origin: bottom center;
+        }
+        .paper-1 { animation: flyOut1 0.8s 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .paper-2 { animation: flyOut2 0.8s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .paper-3 { animation: flyOut3 0.9s 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        @keyframes openFolder {
+            0% { transform: rotateX(0deg); }
+            100% { transform: rotateX(-65deg); }
+        }
+        @keyframes flyOut1 {
+            0% { opacity: 0; transform: translateY(0) scale(0.8) rotate(0deg); }
+            20% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-120px) scale(1.3) rotate(-15deg); }
+        }
+        @keyframes flyOut2 {
+            0% { opacity: 0; transform: translateY(0) scale(0.8) rotate(0deg); }
+            20% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-130px) scale(1.4) rotate(12deg); }
+        }
+        @keyframes flyOut3 {
+            0% { opacity: 0; transform: translateY(0) scale(0.8) rotate(0deg); }
+            20% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-150px) scale(1.6) rotate(-5deg); }
+        }
+    </style>
 </head>
 <body class="bg-[#ddcbaa] text-slate-900 pb-32 font-inter relative">
+
+    <div id="startup-overlay" class="fixed inset-0 bg-[#ddcbaa] flex items-center justify-center transition-opacity duration-700 pointer-events-none" style="z-index: 9999;">
+        <div class="relative perspective-1000 w-32 h-24 z-10">
+            <div class="absolute inset-0 bg-[#d96c00] rounded-xl rounded-tl-none shadow-inner"></div>
+            <div class="absolute -top-3 left-0 w-12 h-4 bg-[#d96c00] rounded-t-lg"></div>
+            
+            <div class="intro-paper paper-1 absolute top-2 left-2 right-2 bottom-2 bg-white rounded shadow-sm flex items-center justify-center text-[#395144]"><i class="fas fa-graduation-cap text-2xl"></i></div>
+            <div class="intro-paper paper-2 absolute top-2 left-2 right-2 bottom-2 bg-[#395144] rounded shadow-sm flex items-center justify-center text-white"><i class="fas fa-briefcase text-2xl"></i></div>
+            <div class="intro-paper paper-3 absolute top-2 left-2 right-2 bottom-2 bg-white rounded shadow-sm flex items-center justify-center text-[#ff7f00] font-black text-2xl border-2 border-[#ff7f00]/20">LX</div>
+            
+            <div class="folder-front absolute inset-0 bg-[#ff7f00] rounded-xl shadow-2xl border-t border-white/20 flex items-center justify-center">
+                <i class="fas fa-folder-open text-white/30 text-3xl"></i>
+            </div>
+        </div>
+    </div>
 
     <div class="fixed top-0 left-0 w-full h-1.5 z-50 bg-black/10">
         <div id="progress-bar" class="h-full bg-[#ff7f00] transition-all duration-300" style="width: 0%;"></div>
@@ -489,5 +541,21 @@
 
     <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
+    
+    <script>
+        window.addEventListener('load', () => {
+            const startupOverlay = document.getElementById('startup-overlay');
+            if (startupOverlay) {
+                // Disparaît doucement au bout de 1,6s
+                setTimeout(() => {
+                    startupOverlay.style.opacity = '0';
+                    // Se détruit complètement pour laisser cliquer sur le CV
+                    setTimeout(() => {
+                        startupOverlay.remove();
+                    }, 700);
+                }, 1600);
+            }
+        });
+    </script>
 </body>
 </html>
