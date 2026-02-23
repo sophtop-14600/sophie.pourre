@@ -16,7 +16,6 @@ body {
     box-shadow: 0 30px 60px -12px rgba(57, 81, 68, 0.2);
 }
 
-/* ----- FIX DU SAUT D'ÉCRAN (LAYOUT SHIFT) ----- */
 .scroll-reveal, .achievement-card {
     opacity: 0;
     transform: translateY(20px);
@@ -48,7 +47,6 @@ body {
     opacity: 1;
     transform: translateX(0);
 }
-/* ---------------------------------------------- */
 
 .animate-fade-in {
     animation: fadeIn 0.4s ease-out forwards;
@@ -67,18 +65,15 @@ body {
     animation: pulse-fast 1s infinite ease-in-out;
 }
 
-/* LX Quiz (Tiroir) */
 .quiz-card.active .quiz-back { transform: translateY(0); }
 .quiz-card.active .quiz-front { transform: translateY(-100%); }
 
-/* "Ce que j'apporte" (Effet Flip 3D) */
 .perspective-1000 { perspective: 1000px; }
 .preserve-3d { transform-style: preserve-3d; }
 .backface-hidden { backface-visibility: hidden; }
 .rotate-y-180 { transform: rotateY(180deg); }
 .value-card.active .value-inner { transform: rotateY(180deg); }
 
-/* Erreur Mot de passe (Shake) */
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
@@ -100,3 +95,12 @@ body {
 }
 
 #progress-bar { box-shadow: 0 0 10px rgba(255, 127, 0, 0.5); }
+
+/* Masquer la scrollbar pour le menu sur mobile */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

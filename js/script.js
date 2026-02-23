@@ -22,14 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// LOGIQUE DU PORTFOLIO
 function unlockPortfolio() {
     const input = document.getElementById('portfolio-pwd');
     const error = document.getElementById('pwd-error');
     const modal = document.getElementById('portfolio-modal');
     const modalContent = document.getElementById('portfolio-content');
     
-    // Mots de passe valides (en minuscules pour faciliter la vérification)
     const validPasswords = ['recruteur', 'portfolio', 'lxdesign', 'sophie'];
     const val = input.value.trim().toLowerCase();
     
@@ -42,20 +40,17 @@ function unlockPortfolio() {
     }
 
     if (validPasswords.includes(val)) {
-        // Succès
         error.classList.add('hidden');
         input.parentElement.classList.remove('border-red-500');
         input.value = ''; 
         
-        // Affichage fluide du Modal
         modal.classList.remove('hidden');
         modal.classList.add('flex');
-        void modal.offsetWidth; // Force le reflow pour que l'animation CSS se joue
+        void modal.offsetWidth;
         modal.classList.remove('opacity-0');
         modalContent.classList.remove('scale-95');
         modalContent.classList.add('scale-100');
     } else {
-        // Erreur
         error.textContent = translations[currentLang]['pwd_incorrect'];
         error.classList.remove('hidden');
         input.parentElement.classList.add('shake', 'border-red-500');
@@ -74,7 +69,7 @@ function closePortfolio() {
     setTimeout(() => {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-    }, 300); // Doit correspondre à la durée de transition CSS
+    }, 300);
 }
 
 function toggleDetails(id, btn) {

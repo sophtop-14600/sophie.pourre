@@ -16,12 +16,34 @@
         <div id="progress-bar" class="h-full bg-[#ff7f00] transition-all duration-300" style="width: 0%;"></div>
     </div>
 
-    <div class="sticky top-6 z-40 w-full flex justify-center px-2 mb-10 pointer-events-none">
-        <div class="pointer-events-auto bg-white/70 backdrop-blur-xl border border-white/50 p-1.5 rounded-full shadow-xl flex gap-1 max-w-full overflow-hidden">
-            <button onclick="filterSection('all')" class="tab-btn bg-[#395144] text-white shadow-md px-4 py-2 text-[10px] md:text-xs font-black uppercase tracking-wider rounded-full whitespace-nowrap transition-all duration-300" data-tab="all" data-key="tab_all"></button>
-            <button onclick="filterSection('experience')" class="tab-btn text-[#395144]/60 hover:text-[#395144] hover:bg-white/40 px-4 py-2 text-[10px] md:text-xs font-black uppercase tracking-wider rounded-full whitespace-nowrap transition-all duration-300" data-tab="experience" data-key="tab_exp"></button>
-            <button onclick="filterSection('skills')" class="tab-btn text-[#395144]/60 hover:text-[#395144] hover:bg-white/40 px-4 py-2 text-[10px] md:text-xs font-black uppercase tracking-wider rounded-full whitespace-nowrap transition-all duration-300" data-tab="skills" data-key="tab_skills"></button>
-            <button onclick="filterSection('education')" class="tab-btn text-[#395144]/60 hover:text-[#395144] hover:bg-white/40 px-4 py-2 text-[10px] md:text-xs font-black uppercase tracking-wider rounded-full whitespace-nowrap transition-all duration-300" data-tab="education" data-key="tab_edu"></button>
+    <div class="sticky top-6 z-40 w-full flex justify-center px-2 md:px-4 mb-10 pointer-events-none">
+        <div class="pointer-events-auto bg-white/90 backdrop-blur-xl border border-white/50 p-1.5 rounded-full shadow-xl flex items-center gap-1 md:gap-2 max-w-full">
+            
+            <button onclick="filterSection('all')" class="tab-btn bg-[#395144] text-white shadow-md w-11 h-11 md:w-auto md:h-auto md:px-5 md:py-2.5 flex items-center justify-center gap-2 rounded-full transition-all duration-300 shrink-0 group" data-tab="all" title="Tout">
+                <i class="fas fa-th-large text-lg md:text-sm text-[#ff7f00] group-hover:scale-110 transition-transform"></i>
+                <span class="hidden md:block text-xs font-black uppercase tracking-wider" data-key="tab_all">Tout</span>
+            </button>
+            
+            <button onclick="filterSection('skills')" class="tab-btn text-[#395144]/60 hover:text-[#395144] hover:bg-white/40 w-11 h-11 md:w-auto md:h-auto md:px-5 md:py-2.5 flex items-center justify-center gap-2 rounded-full transition-all duration-300 shrink-0 group" data-tab="skills" title="Expertises">
+                <i class="fas fa-gem text-sm md:text-sm group-hover:scale-110 transition-transform"></i>
+                <span class="hidden md:block text-xs font-black uppercase tracking-wider" data-key="tab_skills">Expertises</span>
+            </button>
+            
+            <button onclick="filterSection('experience')" class="tab-btn text-[#395144]/60 hover:text-[#395144] hover:bg-white/40 w-11 h-11 md:w-auto md:h-auto md:px-5 md:py-2.5 flex items-center justify-center gap-2 rounded-full transition-all duration-300 shrink-0 group" data-tab="experience" title="Expériences">
+                <i class="fas fa-briefcase text-sm md:text-sm group-hover:scale-110 transition-transform"></i>
+                <span class="hidden md:block text-xs font-black uppercase tracking-wider" data-key="tab_exp">Expériences</span>
+            </button>
+            
+            <button onclick="filterSection('education')" class="tab-btn text-[#395144]/60 hover:text-[#395144] hover:bg-white/40 w-11 h-11 md:w-auto md:h-auto md:px-5 md:py-2.5 flex items-center justify-center gap-2 rounded-full transition-all duration-300 shrink-0 group" data-tab="education" title="Diplômes">
+                <i class="fas fa-graduation-cap text-sm md:text-sm group-hover:scale-110 transition-transform"></i>
+                <span class="hidden md:block text-xs font-black uppercase tracking-wider" data-key="tab_edu">Diplômes</span>
+            </button>
+
+            <button onclick="filterSection('portfolio')" class="tab-btn text-[#395144]/60 hover:text-[#395144] hover:bg-white/40 w-11 h-11 md:w-auto md:h-auto md:px-5 md:py-2.5 flex items-center justify-center gap-2 rounded-full transition-all duration-300 shrink-0 group" data-tab="portfolio" title="Portfolio">
+                <i class="fas fa-folder-open text-sm md:text-sm group-hover:scale-110 transition-transform"></i>
+                <span class="hidden md:block text-xs font-black uppercase tracking-wider" data-key="tab_portfolio">Portfolio</span>
+            </button>
+
         </div>
     </div>
 
@@ -71,11 +93,11 @@
                     <i class="fas fa-id-card text-[#ff7f00] text-sm"></i> Contact
                 </p>
                 <div class="flex gap-2 mb-4">
-                    <a href="https://fr.linkedin.com/in/sophiepourre14600" target="_blank" class="w-10 h-10 bg-white text-blue-600 rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-sm border border-black/5"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:sophie.pourre@free.fr" class="w-10 h-10 bg-white text-red-600 rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-sm border border-black/5"><i class="fas fa-envelope"></i></a>
-                    <a href="https://join.skype.com/invite/ibBWrlQGStMI" target="_blank" class="w-10 h-10 bg-white text-blue-400 rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-sm border border-black/5"><i class="fab fa-skype"></i></a>
+                    <a href="https://fr.linkedin.com/in/sophiepourre14600" target="_blank" title="LinkedIn" class="w-10 h-10 bg-white text-blue-600 rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-sm border border-black/5"><i class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="mailto:sophie.pourre@free.fr" title="Email" class="w-10 h-10 bg-white text-red-600 rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-sm border border-black/5"><i class="fas fa-envelope text-lg"></i></a>
+                    <a href="https://github.com/sophiepourre" target="_blank" title="GitHub" class="w-10 h-10 bg-white text-slate-800 rounded-lg flex items-center justify-center hover:scale-110 transition-all shadow-sm border border-black/5"><i class="fab fa-github text-xl"></i></a>
                 </div>
-                <a href="#" class="w-full bg-[#395144] text-white py-3.5 rounded-xl flex items-center justify-center gap-3 hover:bg-[#ff7f00] transition-all shadow-lg group">
+                <a href="https://sophie.pourre.free.fr/" target="_blank" class="w-full bg-[#395144] text-white py-3.5 rounded-xl flex items-center justify-center gap-3 hover:bg-[#ff7f00] transition-all shadow-lg group">
                     <i class="fas fa-file-pdf text-xl group-hover:scale-110 transition-transform"></i>
                     <span data-key="download_cv" class="text-[10px] font-black uppercase tracking-widest"></span>
                 </a>
@@ -304,7 +326,7 @@
             </div>
         </div>
 
-        <div id="education" class="bento-card col-span-1 bg-[#ff7f00] text-white p-8 searchable relative overflow-hidden h-fit cat-education">
+        <div id="education" class="bento-card col-span-1 bg-[#9f7e69] text-white p-8 searchable relative overflow-hidden h-fit cat-education">
             <h2 data-key="module_03_title" class="text-xl font-black mb-8 uppercase tracking-widest border-b border-white/20 pb-4"></h2>
             <ul class="space-y-6">
                 <li><span data-key="edu_licence" class="block font-bold text-sm uppercase leading-tight"></span><span class="text-xs text-white/70 font-black">2009</span></li>
@@ -354,7 +376,7 @@
             </div>
         </div>
 
-        <div class="bento-card col-span-1 md:col-span-3 bg-gradient-to-br from-[#1a2e22] to-[#395144] text-white p-8 md:p-12 relative overflow-hidden searchable shadow-2xl">
+        <div id="portfolio" class="bento-card col-span-1 md:col-span-3 bg-gradient-to-br from-[#1a2e22] to-[#395144] text-white p-8 md:p-12 relative overflow-hidden searchable shadow-2xl cat-portfolio">
             <i class="fas fa-lock absolute -right-10 -top-10 text-[15rem] text-white/5 rotate-12 pointer-events-none"></i>
             
             <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -416,7 +438,7 @@
                     </div>
                     <div>
                         <h3 data-key="portfolio_modal_title" class="text-xl md:text-2xl font-black text-[#395144] uppercase tracking-widest"></h3>
-                        <p class="text-xs font-bold text-slate-600 uppercase tracking-widest mt-1">Accès Restreint Autorisé</p>
+                        <p data-key="portfolio_access" class="text-xs font-bold text-slate-600 uppercase tracking-widest mt-1"></p>
                     </div>
                 </div>
                 <button onclick="closePortfolio()" class="w-12 h-12 bg-white/50 hover:bg-white border border-black/5 rounded-full flex items-center justify-center text-[#395144] hover:text-red-500 hover:scale-110 transition-all shadow-sm">
@@ -426,33 +448,33 @@
             
             <div class="p-6 md:p-8 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 bg-white/50 rounded-b-[2rem]">
                 
-                <a href="#" target="_blank" class="group p-5 rounded-2xl border border-white bg-white hover:bg-[#395144] transition-all duration-300 flex items-center gap-5 shadow-sm hover:shadow-xl">
+                <a href="https://VOTRE_COMPTE_GITHUB.github.io/VOTRE_REPO/docs/sl_onboard_xtr_blur_a1f9.pdf" target="_blank" class="group p-5 rounded-2xl border border-white bg-white hover:bg-[#395144] transition-all duration-300 flex items-center gap-5 shadow-sm hover:shadow-xl">
                     <div class="w-14 h-14 bg-red-50 border border-red-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <i class="fas fa-file-pdf text-red-500 text-2xl"></i>
                     </div>
                     <div>
                         <h4 class="text-sm font-black text-[#395144] group-hover:text-white transition-colors leading-tight mb-1.5">Extrait Storyline - Module Onboarding</h4>
-                        <span class="inline-block bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded group-hover:bg-white/20 group-hover:text-white transition-colors">PDF • 2.4 Mo</span>
+                        <span class="inline-block bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded group-hover:bg-white/20 group-hover:text-white transition-colors">PDF Partiellement Flouté • 2.4 Mo</span>
                     </div>
                 </a>
 
-                <a href="#" target="_blank" class="group p-5 rounded-2xl border border-white bg-white hover:bg-[#395144] transition-all duration-300 flex items-center gap-5 shadow-sm hover:shadow-xl">
+                <a href="https://VOTRE_COMPTE_GITHUB.github.io/VOTRE_REPO/docs/arch_dita_b2c8_obfuscated.pdf" target="_blank" class="group p-5 rounded-2xl border border-white bg-white hover:bg-[#395144] transition-all duration-300 flex items-center gap-5 shadow-sm hover:shadow-xl">
                     <div class="w-14 h-14 bg-red-50 border border-red-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <i class="fas fa-file-pdf text-red-500 text-2xl"></i>
                     </div>
                     <div>
                         <h4 class="text-sm font-black text-[#395144] group-hover:text-white transition-colors leading-tight mb-1.5">Architecture Documentaire DITA</h4>
-                        <span class="inline-block bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded group-hover:bg-white/20 group-hover:text-white transition-colors">PDF • 1.1 Mo</span>
+                        <span class="inline-block bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded group-hover:bg-white/20 group-hover:text-white transition-colors">PDF Partiellement Flouté • 1.1 Mo</span>
                     </div>
                 </a>
 
-                <a href="#" target="_blank" class="group p-5 rounded-2xl border border-white bg-white hover:bg-[#395144] transition-all duration-300 flex items-center gap-5 shadow-sm hover:shadow-xl">
+                <a href="https://VOTRE_COMPTE_GITHUB.github.io/VOTRE_REPO/docs/guide_onepager_mch_blur.pdf" target="_blank" class="group p-5 rounded-2xl border border-white bg-white hover:bg-[#395144] transition-all duration-300 flex items-center gap-5 shadow-sm hover:shadow-xl">
                     <div class="w-14 h-14 bg-red-50 border border-red-100 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                         <i class="fas fa-file-pdf text-red-500 text-2xl"></i>
                     </div>
                     <div>
                         <h4 class="text-sm font-black text-[#395144] group-hover:text-white transition-colors leading-tight mb-1.5">Guide Multisupport One-Pager</h4>
-                        <span class="inline-block bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded group-hover:bg-white/20 group-hover:text-white transition-colors">PDF • 3.5 Mo</span>
+                        <span class="inline-block bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded group-hover:bg-white/20 group-hover:text-white transition-colors">PDF Partiellement Flouté • 3.5 Mo</span>
                     </div>
                 </a>
 

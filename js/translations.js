@@ -4,6 +4,7 @@ const translations = {
         tab_exp: "Expériences",
         tab_skills: "Expertises",
         tab_edu: "Diplômes",
+        tab_portfolio: "Portfolio",
         title: "Learning & Knowledge Architect",
         subtitle: "Digital Learning – LMS – Documentation Strategy",
         intro_quote: "Spécialiste de la conception pédagogique et de l'architecture documentaire avec plus de 20 ans d'expertise. Je transforme les informations techniques complexes en expériences d'apprentissage fluides, interactives et scalables.",
@@ -23,7 +24,6 @@ const translations = {
         ach_05: "Vulgarisation de concepts complexes via la création de supports 'One-Pager' didactiques.",
         ach_06: "Optimisation de la gestion de données techniques et génération automatique de listes de pièces.",
 
-        // Ce que j'apporte
         value_title: "Ce que j'apporte",
         value_front_text: "Découvrez ma valeur ajoutée en 5 points clés pour vos projets de formation et de documentation.",
         value_hover: "Cliquez pour retourner",
@@ -33,26 +33,23 @@ const translations = {
         value_4: "Facilite l’onboarding produit.",
         value_5: "Capitalise le savoir d’équipe.",
 
-        // Quiz LX
         qcm_title: "LX Quiz",
         qcm_question: "Quelle est la différence entre l'e-learning traditionnel et le Learning Experience (LX) Design ?",
         qcm_hover: "Cliquez pour la réponse",
         qcm_answer: "Là où l'e-learning classique se concentre sur le contenu, le LX Design se concentre sur l'apprenant. Il vise à créer des expériences immersives, interactives et sans friction pour faciliter l'ancrage des compétences.",
 
-        // IA Block
         skills_ai: "Intelligence Artificielle",
         skills_ai_tools: "Prompt Engineering avancé & intégration des flux IA (Gemini, ChatGPT) dans la conception pédagogique.",
 
-        // Portfolio
         portfolio_title: "Portfolio Confidentiel",
         portfolio_subtitle: "Accessible recruteur seulement — Protection par mot de passe",
-        portfolio_desc: "Découvrez des extraits concrets de mes conceptions e-learning, modules interactifs, et architectures documentaires.",
+        portfolio_desc: "Découvrez des extraits concrets de conceptions.",
+        portfolio_access: "Accès Restreint Autorisé",
         pwd_placeholder: "Saisir le mot de passe...",
         pwd_required: "Mot de passe obligatoire",
         pwd_incorrect: "Mot de passe incorrect",
         portfolio_modal_title: "Galerie de Projets",
 
-        // Expériences (Titres & Dates)
         michelin_enterprise: "Michelin Connected Fleet",
         michelin_dates: "2021 - PRÉSENT",
         michelin_job: "Designer eLearning",
@@ -64,8 +61,8 @@ const translations = {
         kubota_enterprise: "Kubota Europe",
         kubota_dates: "2015 - 2019",
         kubota_job: "Concepteur Rédacteur Technique",
-            details_button: "Détails",
-            less_button: "Moins",
+        details_button: "Détails",
+        less_button: "Moins",
         
         nmj_enterprise: "LGM Document Engineering",
         nmj_dates: "2004 - 2014",
@@ -79,7 +76,6 @@ const translations = {
         procotec_dates: "2001 - 2003",
         procotec_job: "Concepteur P.A.O. & Multimédia",
 
-        // Expériences (Descriptions Détaillées)
         mich_desc_1: "Développement d'une base de connaissances HTML structurée dédiée aux installateurs terrain.",
         mich_desc_2: "Conception de supports didactiques (One-Pagers) et rédaction de guides d'installation multisupports (PDF/HTML).",
         mich_desc_3: "Administration fonctionnelle de la plateforme LMS : création des comptes, gestion des cohortes, suivi et validation des acquis distanciels.",
@@ -115,6 +111,7 @@ const translations = {
         tab_exp: "Experience",
         tab_skills: "Expertise",
         tab_edu: "Degrees",
+        tab_portfolio: "Portfolio",
         title: "Learning & Knowledge Architect",
         subtitle: "Digital Learning – LMS – Documentation Strategy",
         intro_quote: "Instructional design and documentation architecture specialist with 20+ years of expertise. I transform complex technical information into fluid, interactive, and scalable learning experiences.",
@@ -134,7 +131,6 @@ const translations = {
         ach_05: "Technical popularization through high-impact didactic 'One-Pager' designs.",
         ach_06: "Technical data management optimization and automatic spare parts list generation.",
 
-        // Ce que j'apporte
         value_title: "What I Bring",
         value_front_text: "Discover my added value in 5 key points for your training and documentation projects.",
         value_hover: "Click to flip card",
@@ -144,26 +140,23 @@ const translations = {
         value_4: "Facilitates product onboarding.",
         value_5: "Capitalizes on team knowledge.",
 
-        // Quiz LX
         qcm_title: "LX Quiz",
         qcm_question: "What is the difference between traditional e-learning and Learning Experience (LX) Design?",
         qcm_hover: "Click for the answer",
         qcm_answer: "Where traditional e-learning focuses on the content itself, LX Design is strictly learner-centric. It aims to build immersive, interactive, and frictionless experiences to boost skill retention.",
 
-        // AI Block
         skills_ai: "Artificial Intelligence",
         skills_ai_tools: "Advanced Prompt Engineering & integration of AI workflows (Gemini, ChatGPT) into instructional design.",
 
-        // Portfolio
         portfolio_title: "Confidential Portfolio",
         portfolio_subtitle: "Recruiter access only — Password protected",
-        portfolio_desc: "Discover concrete samples of my e-learning designs, interactive modules, and documentation architectures.",
+        portfolio_desc: "Discover concrete samples of designs.",
+        portfolio_access: "Authorized Restricted Access",
         pwd_placeholder: "Enter password...",
         pwd_required: "Password is required",
         pwd_incorrect: "Incorrect password",
         portfolio_modal_title: "Projects Gallery",
 
-        // Expériences (Titres & Dates)
         michelin_enterprise: "Michelin Connected Fleet",
         michelin_dates: "2021 - PRESENT",
         michelin_job: "eLearning Designer",
@@ -175,8 +168,8 @@ const translations = {
         kubota_enterprise: "Kubota Europe",
         kubota_dates: "2015 - 2019",
         kubota_job: "Technical Writing Designer",
-            details_button: "Details",
-            less_button: "Less",
+        details_button: "Details",
+        less_button: "Less",
         
         nmj_enterprise: "LGM Document Engineering",
         nmj_dates: "2004 - 2014",
@@ -190,7 +183,6 @@ const translations = {
         procotec_dates: "2001 - 2003",
         procotec_job: "DTP & Multimedia Designer",
 
-        // Expériences (Descriptions Détaillées)
         mich_desc_1: "Development of a structured HTML knowledge base dedicated to field installers.",
         mich_desc_2: "Design of didactic supports (One-Pagers) and multi-channel installation guides (PDF/HTML).",
         mich_desc_3: "Functional LMS platform administration: account creation, cohort management, progress tracking, and remote skills validation.",
