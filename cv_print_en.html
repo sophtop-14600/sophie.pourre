@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Sophie Pourre - Learning & Knowledge Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #2b2b2b;
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            box-sizing: border-box;
+        }
+
+        /* Calibration exacte A4 avec verrouillage strict anti-débordement */
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            max-height: 297mm;
+            background-color: #fcfbf9;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            overflow: hidden; /* Empêche tout élément de déclencher une page 2 */
+            position: relative;
+        }
+
+        /* Règles pour la génération PDF */
+        @media print {
+            body { background: none; padding: 0; margin: 0; }
+            .a4-page { box-shadow: none; width: 210mm; height: 297mm; }
+            @page { size: A4; margin: 0; }
+            .print-hide { display: none !important; }
+        }
+
+        .col-left {
+            width: 35%;
+            background-color: #395144;
+            color: white;
+            padding: 2rem 1.5rem; /* Marges réduites */
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Espacement réduit */
+        }
+
+        .col-right {
+            width: 65%;
+            padding: 2rem; /* Marges réduites */
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; /* Espacement réduit */
+            background-color: #ddcbaa;
+            position: relative;
+        }
+
+        .title-left {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #ff7f00;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 0.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .title-right {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #395144;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #ff7f00;
+            padding-bottom: 0.25rem;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.75rem; /* Réduit pour gagner de la place */
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.3rem;
+            width: 8px;
+            height: 8px;
+            background-color: #ff7f00;
+            border-radius: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 1rem;
+            bottom: -0.75rem;
+            width: 2px;
+            background-color: rgba(57, 81, 68, 0.1);
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="window.print()" class="print-hide fixed top-4 right-4 bg-[#ff7f00] text-white px-6 py-3 rounded-full font-black uppercase tracking-widest shadow-xl hover:scale-105 transition-transform z-50">
+        <i class="fas fa-print mr-2"></i> Generate PDF
+    </button>
+
+    <div class="a4-page text-sm">
+        
+        <div class="col-left">
+            <div class="w-16 h-16 bg-[#ff7f00] rounded-2xl flex items-center justify-center shadow-lg mb-1 shrink-0">
+                <span class="text-3xl font-black text-white italic tracking-tighter">LX</span>
+            </div>
+
+            <div>
+                <h2 class="title-left">Contact</h2>
+                <ul class="space-y-2 text-[11px] font-medium text-white/90">
+                    <li class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-[#ff7f00] w-4 text-center"></i> Honfleur, Normandy (FR)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-envelope text-[#ff7f00] w-4 text-center"></i> sophie.pourre@free.fr</li>
+                    <li class="flex items-center gap-3"><i class="fab fa-linkedin-in text-[#ff7f00] w-4 text-center"></i> /in/sophiepourre14600</li>
+                    <li class="flex items-center gap-3"><i class="fab fa-github text-[#ff7f00] w-4 text-center"></i> /sophiepourre</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="title-left">Expertise</h2>
+                <div class="mb-3">
+                    <h3 class="font-bold text-white mb-1 text-[11px]">Learning & Pedagogy</h3>
+                    <p class="text-[9px] text-white/70 leading-tight">Moodle (Admin & Design) • LMS Strategy • Storyline • Instructional Design</p>
+                </div>
+                <div class="mb-3">
+                    <h3 class="font-bold text-white mb-1 text-[11px]">Documentation & KM</h3>
+                    <p class="text-[9px] text-white/70 leading-tight">Documentation Architecture • XML / DITA • Knowledge Base • Standardization</p>
+                </div>
+                <div class="mb-2">
+                    <h3 class="font-bold text-[#ff7f00] mb-1 text-[11px]">Artificial Intelligence</h3>
+                    <p class="text-[9px] text-white/70 leading-tight">Prompt Engineering • AI integration in instructional design (Gemini, ChatGPT)</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title-left">Software Tools</h2>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold tracking-wide">VS Code</span>
+                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold tracking-wide">InDesign / Adobe CC</span>
+                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold tracking-wide">Arbortext PTC</span>
+                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold tracking-wide">FrameMaker</span>
+                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold tracking-wide">SolidWorks Composer</span>
+                    <span class="bg-white/10 px-2 py-1 rounded text-[8px] font-bold tracking-wide">HTML / CSS</span>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="title-left">Education & Degrees</h2>
+                <ul class="space-y-2 text-[11px]">
+                    <li>
+                        <span class="font-bold block">Bachelor in Technical Writing</span>
+                        <span class="text-[9px] text-[#ff7f00] font-black">2009</span>
+                    </li>
+                    <li>
+                        <span class="font-bold block">Graphic Design & DTP Degree</span>
+                        <span class="text-[9px] text-[#ff7f00] font-black">2001</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt-auto pt-4">
+                <span class="bg-[#ff7f00] text-white px-3 py-1.5 rounded-lg text-[9px] font-black tracking-widest uppercase block text-center">
+                    Bilingual English (B2.3)
+                </span>
+            </div>
+        </div>
+
+        <div class="col-right">
+            
+            <div class="absolute top-20 right-10 text-[10rem] font-black text-[#395144] opacity-5 pointer-events-none select-none z-0">CV</div>
+
+            <div class="relative z-10 bg-white p-5 rounded-2xl shadow-sm border border-black/5 shrink-0">
+                <p class="text-[9px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Sophie Pourre</p>
+                <h1 class="text-2xl font-black text-[#395144] leading-tight mb-1 uppercase tracking-tighter">Learning & Knowledge Architect</h1>
+                <p class="text-[11px] font-black text-[#ff7f00] uppercase tracking-widest mb-3">Digital Learning – LMS – Doc. Strategy</p>
+                <p class="text-xs font-medium italic text-slate-700 leading-relaxed pl-4 border-l-2 border-[#ff7f00]">
+                    Instructional design and documentation architecture specialist with 20+ years of expertise. I transform complex technical information into fluid, interactive, and scalable learning experiences.
+                </p>
+            </div>
+
+            <div class="relative z-10 flex-1">
+                <h2 class="title-right">Professional Experience</h2>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-[13px] uppercase">Michelin Connected Fleet</h3>
+                        <span class="bg-[#395144] text-white px-2 py-0.5 rounded text-[8px] font-black">2021 - PRESENT</span>
+                    </div>
+                    <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-1.5">eLearning Designer</p>
+                    <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
+                        <li>• Development of a structured HTML knowledge base for field installers.</li>
+                        <li>• Functional LMS platform administration (accounts, cohorts, skills validation).</li>
+                        <li>• Design of didactic supports (One-Pagers) and multi-channel installation guides.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-[13px] uppercase">Safran Nacelles</h3>
+                        <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[8px] font-black">2019 - 2020</span>
+                    </div>
+                    <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-1.5">Documentation Project Manager</p>
+                    <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
+                        <li>• Analysis and traceability of hardware evolutions (AMM A320/A330 Neo).</li>
+                        <li>• Management of documentary deliverables in direct interface with Airbus teams.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-[13px] uppercase">Kubota Europe</h3>
+                        <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[8px] font-black">2015 - 2019</span>
+                    </div>
+                    <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-1.5">Technical Writing Designer</p>
+                    <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
+                        <li>• Bilingual technical writing (FR/EN) for user manuals and assembly instructions.</li>
+                        <li>• Generation of Bill of Materials (BOM) and 3D interactive exploded views.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-[13px] uppercase">LGM Document Engineering</h3>
+                        <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[8px] font-black">2004 - 2014</span>
+                    </div>
+                    <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-1.5">Technical Assistance Project Manager</p>
+                    <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
+                        <li>• Managed Logistic Support Analysis (LSA) documentation projects for major accounts.</li>
+                        <li>• Created graphic charters, technical illustrations, and authored user manuals.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-[13px] uppercase">Procotec / Univ. Paris-Diderot</h3>
+                        <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[8px] font-black">2001 - 2010</span>
+                    </div>
+                    <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-1.5">Multimedia Designer / Instructor</p>
+                    <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
+                        <li>• Software tools instruction (FrameMaker, MS Word) for Bachelor/Master degrees.</li>
+                        <li>• Digital content and DTP production (Schneider Electric, Sagem...).</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

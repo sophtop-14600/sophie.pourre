@@ -155,9 +155,21 @@ function filterSection(category) {
         if (tab.getAttribute('data-tab') === category) {
             tab.classList.remove(...inactiveClasses);
             tab.classList.add(...activeClasses);
+            
+            const icon = tab.querySelector('i');
+            if (icon && category === 'all') {
+                icon.classList.remove('text-[#ff7f00]');
+                icon.classList.add('text-white');
+            }
         } else {
             tab.classList.remove(...activeClasses);
             tab.classList.add(...inactiveClasses);
+            
+            const icon = tab.querySelector('i');
+            if (icon && tab.getAttribute('data-tab') === 'all') {
+                icon.classList.remove('text-white');
+                icon.classList.add('text-[#ff7f00]');
+            }
         }
     });
 
@@ -205,6 +217,22 @@ function updateUIContent() {
 
     const langBtnText = document.getElementById('lang-btn-text');
     if (langBtnText) langBtnText.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+
+    // CHANGEMENT DES IMAGES SELON LA LANGUE
+    document.querySelectorAll('.lang-img').forEach(img => {
+        const newSrc = img.getAttribute(`data-src-${currentLang}`);
+        if (newSrc) {
+            img.src = newSrc;
+        }
+    });
+
+    // CHANGEMENT DU LIEN DU CV SELON LA LANGUE
+    const cvLink = document.getElementById('cv-link');
+    if (cvLink) {
+        cvLink.href = currentLang === 'fr' 
+            ? "cv/CV Sophie Pourre - Learning & Knowledge Architect - FR.pdf" 
+            : "cv/CV Sophie Pourre - Learning & Knowledge Architect - EN.pdf";
+    }
 }
 
 function searchContent(query) {
