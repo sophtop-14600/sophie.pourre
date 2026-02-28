@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         revealElements.forEach(el => el.classList.add('active'));
     }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
 });
 
 function unlockPortfolio() {
@@ -28,7 +34,7 @@ function unlockPortfolio() {
     const modal = document.getElementById('portfolio-modal');
     const modalContent = document.getElementById('portfolio-content');
     
-    const validPasswords = ['recruteur', 'portfolio', 'lxdesign', 'sophie'];
+    const validPasswords = ['recrut_2026!'];
     const val = input.value.trim().toLowerCase();
     
     if (!val) {
@@ -69,6 +75,36 @@ function closePortfolio() {
     setTimeout(() => {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
+    }, 300);
+}
+
+function openLightbox(src) {
+    const modal = document.getElementById('lightbox-modal');
+    const img = document.getElementById('lightbox-img');
+    
+    img.src = src;
+    
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    void modal.offsetWidth;
+    
+    modal.classList.remove('opacity-0');
+    img.classList.remove('scale-95');
+    img.classList.add('scale-100');
+}
+
+function closeLightbox() {
+    const modal = document.getElementById('lightbox-modal');
+    const img = document.getElementById('lightbox-img');
+    
+    modal.classList.add('opacity-0');
+    img.classList.remove('scale-100');
+    img.classList.add('scale-95');
+    
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        img.src = '';
     }, 300);
 }
 
@@ -218,7 +254,6 @@ function updateUIContent() {
     const langBtnText = document.getElementById('lang-btn-text');
     if (langBtnText) langBtnText.textContent = currentLang === 'fr' ? 'EN' : 'FR';
 
-    // CHANGEMENT DES IMAGES SELON LA LANGUE
     document.querySelectorAll('.lang-img').forEach(img => {
         const newSrc = img.getAttribute(`data-src-${currentLang}`);
         if (newSrc) {
@@ -226,7 +261,6 @@ function updateUIContent() {
         }
     });
 
-    // CHANGEMENT DU LIEN DU CV SELON LA LANGUE
     const cvLink = document.getElementById('cv-link');
     if (cvLink) {
         cvLink.href = currentLang === 'fr' 
