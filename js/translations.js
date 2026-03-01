@@ -73,7 +73,7 @@ const translations = {
 
         michelin_enterprise: "Michelin Connected Fleet",
         michelin_dates: "2021 - PRÉSENT",
-        michelin_job: "Designer eLearning",
+        michelin_job: "Digital Learning Designer",
         
         safran_enterprise: "Safran Nacelles",
         safran_dates: "2019 - 2020",
@@ -81,7 +81,12 @@ const translations = {
         
         kubota_enterprise: "Kubota Europe",
         kubota_dates: "2015 - 2019",
-        kubota_job: "Concepteur Rédacteur Technique",
+        kubota_job: "Responsable Documentation",
+        
+        freelance_enterprise: "Rédaction | Création graphique",
+        freelance_dates: "2014 - 2015",
+        freelance_job: "Freelance",
+
         details_button: "Détails",
         less_button: "Moins",
         
@@ -108,6 +113,8 @@ const translations = {
         kub_desc_1: "Rédaction technique bilingue (FR/EN) des manuels utilisateurs et notices d'assemblage.",
         kub_desc_2: "Génération de nomenclatures (BOM) et modélisation d'éclatés interactifs via CAO 3D.",
         kub_desc_3: "Production d'illustrations techniques et gestion des flux de publication multicanale (Print/Web) incluant la localisation.",
+
+        free_desc_1: "Activité freelance en rédaction et création graphique.",
 
         lgm_desc_1: "Pilotage de projets d'ingénierie documentaire (ASL) pour des comptes industriels majeurs (FR/EN).",
         lgm_desc_2: "Réalisation d'études d'impact, audit de documentation et contrôle qualité (ex : caméras thermiques).",
@@ -201,7 +208,7 @@ const translations = {
 
         michelin_enterprise: "Michelin Connected Fleet",
         michelin_dates: "2021 - PRESENT",
-        michelin_job: "eLearning Designer",
+        michelin_job: "Digital Learning Designer",
         
         safran_enterprise: "Safran Nacelles",
         safran_dates: "2019 - 2020",
@@ -209,7 +216,12 @@ const translations = {
         
         kubota_enterprise: "Kubota Europe",
         kubota_dates: "2015 - 2019",
-        kubota_job: "Technical Writing Designer",
+        kubota_job: "Documentation Manager",
+        
+        freelance_enterprise: "Writing | Graphic Design",
+        freelance_dates: "2014 - 2015",
+        freelance_job: "Freelance",
+
         details_button: "Details",
         less_button: "Less",
         
@@ -236,6 +248,8 @@ const translations = {
         kub_desc_1: "Bilingual technical writing (FR/EN) for user manuals and assembly instructions.",
         kub_desc_2: "Generation of Bill of Materials (BOM) and modeling of interactive exploded views via 3D CAD.",
         kub_desc_3: "Production of technical illustrations and management of multi-channel publishing workflows (Print/Web) including localization.",
+
+        free_desc_1: "Freelance activity in writing and graphic design.",
 
         lgm_desc_1: "Managed Logistic Support Analysis (LSA) documentation projects for major industrial accounts (FR/EN).",
         lgm_desc_2: "Conducted documentary impact studies, documentation audits, and quality control (e.g., thermal cameras).",
