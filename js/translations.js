@@ -11,6 +11,9 @@ const translations = {
         experience_years: "20+ ANS D'EXPÉRIENCE",
         lang_level: "ANGLAIS BILINGUE (B2.3)",
         availability: "À l'écoute d'opportunités",
+        work_model: "Hybride / Full Remote",
+        based_in: "Basée à",
+        location: "Honfleur, Normandie",
         download_cv: "Consulter CV PDF",
         module_01_title: "Parcours Professionnel",
         module_03_title: "Formation & Diplômes",
@@ -73,7 +76,7 @@ const translations = {
 
         michelin_enterprise: "Michelin Connected Fleet",
         michelin_dates: "2021 - PRÉSENT",
-        michelin_job: "Digital Learning Designer",
+        michelin_job: "Designer eLearning",
         
         safran_enterprise: "Safran Nacelles",
         safran_dates: "2019 - 2020",
@@ -81,7 +84,7 @@ const translations = {
         
         kubota_enterprise: "Kubota Europe",
         kubota_dates: "2015 - 2019",
-        kubota_job: "Responsable Documentation",
+        kubota_job: "Concepteur Rédacteur Technique",
         
         freelance_enterprise: "Rédaction | Création graphique",
         freelance_dates: "2014 - 2015",
@@ -116,10 +119,11 @@ const translations = {
 
         free_desc_1: "Activité freelance en rédaction et création graphique.",
 
-        lgm_desc_1: "Pilotage de projets d'ingénierie documentaire (ASL) pour des comptes industriels majeurs (FR/EN).",
-        lgm_desc_2: "Réalisation d'études d'impact, audit de documentation et contrôle qualité (ex : caméras thermiques).",
-        lgm_desc_3: "Création de chartes graphiques, illustrations techniques et rédaction de manuels d'utilisation multimédia et domotique.",
-        lgm_desc_4: "Gestion de projet globale : planification, reporting, et conception UI (icônes) pour guides d'archivage numérique.",
+        lgm_desc_1: "Missions d'assistance technique et d'ingénierie documentaire (ASL) pour des comptes industriels majeurs : Nexter Systems, Sagem, STS Group et Sage.",
+        lgm_desc_2: "NEXTER SYSTEMS : Études d'impacts documentaires (ASL) et mise en place d'infographie client.",
+        lgm_desc_3: "SAGEM : Rédaction bilingue de guides d'utilisation multimédias, création de chartes graphiques et illustrations PAO.",
+        lgm_desc_4: "STS GROUP : Rédaction de guides d'applications d'archivage numérique, création d'icônes UI et suivi de projets.",
+        lgm_desc_5: "SAGE : Rédaction documentaire d'un outil ERP (multi-tâches) et élaboration d'un tutoriel multimédia.",
 
         did_desc_1: "Ingénierie pédagogique et animation de cours sur Adobe FrameMaker et MS Word (Niveau Licence Pro/Master).",
         did_desc_2: "Conception intégrale des supports de formation numériques à destination des étudiants.",
@@ -146,6 +150,9 @@ const translations = {
         experience_years: "20+ YEARS EXP.",
         lang_level: "BILINGUAL ENGLISH (B2.3)",
         availability: "Open to opportunities",
+        work_model: "Hybrid / Full Remote",
+        based_in: "Based in",
+        location: "Honfleur, Normandy (FR)",
         download_cv: "Download PDF CV",
         module_01_title: "Professional Path",
         module_03_title: "Education & Degrees",
@@ -208,7 +215,7 @@ const translations = {
 
         michelin_enterprise: "Michelin Connected Fleet",
         michelin_dates: "2021 - PRESENT",
-        michelin_job: "Digital Learning Designer",
+        michelin_job: "eLearning Designer",
         
         safran_enterprise: "Safran Nacelles",
         safran_dates: "2019 - 2020",
@@ -216,7 +223,7 @@ const translations = {
         
         kubota_enterprise: "Kubota Europe",
         kubota_dates: "2015 - 2019",
-        kubota_job: "Documentation Manager",
+        kubota_job: "Technical Writing Designer",
         
         freelance_enterprise: "Writing | Graphic Design",
         freelance_dates: "2014 - 2015",
@@ -251,10 +258,11 @@ const translations = {
 
         free_desc_1: "Freelance activity in writing and graphic design.",
 
-        lgm_desc_1: "Managed Logistic Support Analysis (LSA) documentation projects for major industrial accounts (FR/EN).",
-        lgm_desc_2: "Conducted documentary impact studies, documentation audits, and quality control (e.g., thermal cameras).",
-        lgm_desc_3: "Created graphic charters, technical illustrations, and authored multimedia/home automation user manuals.",
-        lgm_desc_4: "End-to-end project management: planning, reporting, and UI design (icons) for digital archiving guides.",
+        lgm_desc_1: "Technical assistance and Logistic Support Analysis (LSA) documentation projects for major accounts: Nexter Systems, Sagem, STS Group, and Sage.",
+        lgm_desc_2: "NEXTER SYSTEMS: Documentary impact studies (LSA) and client infographic implementation.",
+        lgm_desc_3: "SAGEM: Bilingual (FR/EN) writing for multimedia user guides, graphic charters, and DTP illustration.",
+        lgm_desc_4: "STS GROUP: Authored digital archiving application guides, created UI icons, and managed projects.",
+        lgm_desc_5: "SAGE: Authored documentation for a multi-task ERP tool and contributed to a multimedia tutorial.",
 
         did_desc_1: "Instructional design and teaching for Adobe FrameMaker and MS Word (Bachelor/Master degree level).",
         did_desc_2: "Comprehensive design of digital training materials for students.",
