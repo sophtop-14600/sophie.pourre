@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #2b2b2b;
+            background-color: #2b2b2b; /* Fond sombre pour bien voir la page à l'écran */
             display: flex;
             justify-content: center;
             padding: 2rem;
@@ -18,10 +18,10 @@
             print-color-adjust: exact;
         }
 
+        /* Calibration exacte A4 */
         .a4-page {
             width: 210mm;
             height: 297mm;
-            max-height: 297mm;
             background-color: #fcfbf9;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             display: flex;
@@ -29,6 +29,7 @@
             position: relative;
         }
 
+        /* Règles pour la génération PDF */
         @media print {
             body { background: none; padding: 0; }
             .a4-page { box-shadow: none; width: 100%; height: 100%; }
@@ -51,8 +52,8 @@
             padding: 2.5rem;
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
-            background-color: #ddcbaa;
+            gap: 1.5rem;
+            background-color: #ddcbaa; /* Le beige de ton site */
             position: relative;
         }
 
@@ -76,13 +77,13 @@
             border-bottom: 2px solid #ff7f00;
             padding-bottom: 0.25rem;
             display: inline-block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
         .timeline-item {
             position: relative;
             padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
         }
         .timeline-item::before {
             content: '';
@@ -129,11 +130,6 @@
                     <li class="flex items-center gap-3"><i class="fab fa-linkedin-in text-[#ff7f00] w-4 text-center"></i> /in/sophiepourre14600</li>
                     <li class="flex items-center gap-3"><i class="fab fa-github text-[#ff7f00] w-4 text-center"></i> /sophiepourre</li>
                 </ul>
-                <div class="mt-6">
-                    <span class="bg-[#ff7f00] text-white px-3 py-1.5 rounded-lg text-[10px] font-black tracking-widest uppercase block text-center shadow-md">
-                        Anglais Bilingue (B2.3)
-                    </span>
-                </div>
             </div>
 
             <div>
@@ -156,14 +152,11 @@
                 <h2 class="title-left">Outils Logiciels</h2>
                 <div class="flex flex-wrap gap-1.5">
                     <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">VS Code</span>
-                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">DreamWeaver</span>
+                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">InDesign / Adobe CC</span>
                     <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">Arbortext PTC</span>
-                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">SolidWorks Composer</span>
-                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">Adobe CC</span>
                     <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">FrameMaker</span>
-                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">HTML</span>
-                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">SAP</span>
-                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">M365</span>
+                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">SolidWorks Composer</span>
+                    <span class="bg-white/10 px-2 py-1 rounded text-[9px] font-bold">HTML / CSS</span>
                 </div>
             </div>
 
@@ -180,108 +173,92 @@
                     </li>
                 </ul>
             </div>
-            
+
+            <div class="mt-auto">
+                <span class="bg-[#ff7f00] text-white px-3 py-1.5 rounded-lg text-[10px] font-black tracking-widest uppercase block text-center">
+                    Anglais Bilingue (B2.3)
+                </span>
+            </div>
         </div>
 
         <div class="col-right">
             
             <div class="absolute top-20 right-10 text-[10rem] font-black text-[#395144] opacity-5 pointer-events-none select-none z-0">CV</div>
 
-            <div class="relative z-10 bg-white p-6 rounded-2xl shadow-sm border border-black/5 shrink-0">
+            <div class="relative z-10 bg-white p-6 rounded-2xl shadow-sm border border-black/5">
                 <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Sophie Pourre</p>
                 <h1 class="text-3xl font-black text-[#395144] leading-none mb-2 uppercase tracking-tighter">Learning & Knowledge Architect</h1>
                 <p class="text-xs font-black text-[#ff7f00] uppercase tracking-widest mb-4">Digital Learning – LMS – Doc. Strategy</p>
-                <p class="text-[13px] font-medium italic text-slate-700 leading-relaxed pl-4 border-l-2 border-[#ff7f00]">
+                <p class="text-sm font-medium italic text-slate-700 leading-relaxed pl-4 border-l-2 border-[#ff7f00]">
                     Spécialiste de la conception pédagogique et de l'architecture documentaire avec 20+ ans d'expertise. Je transforme les informations techniques complexes en expériences d'apprentissage fluides et scalables.
                 </p>
             </div>
 
-            <div class="relative z-10 flex flex-col justify-between flex-1 mt-2">
-                <div>
-                    <h2 class="title-right">Parcours Professionnel</h2>
+            <div class="relative z-10 flex-1">
+                <h2 class="title-right">Parcours Professionnel</h2>
 
-                    <div class="timeline-item">
-                        <div class="flex items-center gap-2 mb-1">
-                            <h3 class="font-black text-[#395144] text-sm uppercase">Michelin Connected Fleet</h3>
-                            <span class="bg-[#395144] text-white px-2 py-0.5 rounded text-[9px] font-black">2021 - PRÉSENT</span>
-                        </div>
-                        <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Digital Learning Designer</p>
-                        <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
-                            <li>• Développement d'une base de connaissances HTML structurée (installateurs terrain).</li>
-                            <li>• Administration fonctionnelle LMS Moodle (comptes, cohortes, validation des acquis).</li>
-                            <li>• Conception de supports didactiques (One-Pagers) et guides d'installation.</li>
-                        </ul>
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-sm uppercase">Michelin Connected Fleet</h3>
+                        <span class="bg-[#395144] text-white px-2 py-0.5 rounded text-[9px] font-black">2021 - PRÉSENT</span>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="flex items-center gap-2 mb-1">
-                            <h3 class="font-black text-[#395144] text-sm uppercase">Safran Nacelles</h3>
-                            <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2019 - 2020</span>
-                        </div>
-                        <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Chef de Projets Documentaires</p>
-                        <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
-                            <li>• Analyse et traçabilité des évolutions (manuels de maintenance AMM A320/A330).</li>
-                            <li>• Pilotage des livrables en interface directe avec les équipes Airbus.</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex items-center gap-2 mb-1">
-                            <h3 class="font-black text-[#395144] text-sm uppercase">Kubota Europe</h3>
-                            <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2015 - 2019</span>
-                        </div>
-                        <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Responsable Documentation</p>
-                        <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
-                            <li>• Rédaction technique bilingue (FR/EN) de manuels et notices d'assemblage.</li>
-                            <li>• Génération de nomenclatures (BOM) et modélisation d'éclatés interactifs 3D.</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex items-center gap-2 mb-1">
-                            <h3 class="font-black text-[#395144] text-sm uppercase">Rédaction | Création graphique</h3>
-                            <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2014</span>
-                        </div>
-                        <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Freelance</p>
-                        <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
-                            <li>• Activité freelance en rédaction et création graphique.</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex items-center gap-2 mb-1">
-                            <h3 class="font-black text-[#395144] text-sm uppercase">LGM Document Engineering</h3>
-                            <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2004 - 2014</span>
-                        </div>
-                        <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Resp. Projets Assistance Technique</p>
-                        <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
-                            <li>• Pilotage projets d'ingénierie documentaire (ASL) pour majeurs de l'industrie.</li>
-                            <li>• Création de chartes graphiques et rédaction de manuels d'utilisation.</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex items-center gap-2 mb-1">
-                            <h3 class="font-black text-[#395144] text-sm uppercase">Université Paris-Diderot</h3>
-                            <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2009 - 2010</span>
-                        </div>
-                        <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-1.5">Enseignant Outils Logiciels</p>
-                        <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
-                            <li>• Enseignement des outils FrameMaker et Word (Licence Pro/Master).</li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex items-center gap-2 mb-1">
-                            <h3 class="font-black text-[#395144] text-sm uppercase">Procotec</h3>
-                            <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2001 - 2003</span>
-                        </div>
-                        <p class="text-[11px] font-bold text-[#ff7f00] uppercase tracking-wider mb-1.5">Concepteur P.A.O. & Multimédia</p>
-                        <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
-                            <li>• Production de contenus numériques (Schneider Electric, Sagem...).</li>
-                        </ul>
-                    </div>
+                    <p class="text-xs font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Designer eLearning</p>
+                    <ul class="text-xs text-slate-700 space-y-1 leading-snug">
+                        <li>• Développement d'une base de connaissances HTML structurée (installateurs terrain).</li>
+                        <li>• Administration fonctionnelle LMS Moodle (comptes, cohortes, validation des acquis).</li>
+                        <li>• Conception de supports didactiques (One-Pagers) et guides d'installation.</li>
+                    </ul>
                 </div>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-sm uppercase">Safran Nacelles</h3>
+                        <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2019 - 2020</span>
+                    </div>
+                    <p class="text-xs font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Chef de Projets Documentaires</p>
+                    <ul class="text-xs text-slate-700 space-y-1 leading-snug">
+                        <li>• Analyse et traçabilité des évolutions (manuels de maintenance AMM A320/A330).</li>
+                        <li>• Pilotage des livrables en interface directe avec les équipes Airbus.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-sm uppercase">Kubota Europe</h3>
+                        <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2015 - 2019</span>
+                    </div>
+                    <p class="text-xs font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Concepteur Rédacteur Technique</p>
+                    <ul class="text-xs text-slate-700 space-y-1 leading-snug">
+                        <li>• Rédaction technique bilingue (FR/EN) de manuels et notices d'assemblage.</li>
+                        <li>• Génération de nomenclatures (BOM) et modélisation d'éclatés interactifs 3D.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-sm uppercase">LGM Document Engineering</h3>
+                        <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2004 - 2014</span>
+                    </div>
+                    <p class="text-xs font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Resp. Projets Assistance Technique</p>
+                    <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
+                        <li>• <b>Nexter Systems</b> : Doc. ASL / <b>STS Group</b> : Guides logiciels d'archivage.</li>
+                        <li>• <b>Sagem</b> : Manuels multimédias, création de chartes graphiques et UI.</li>
+                        <li>• <b>Sage</b> : Documentation outil ERP et tutoriels multimédias.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="font-black text-[#395144] text-sm uppercase">Procotec / Univ. Paris-Diderot</h3>
+                        <span class="bg-[#395144]/10 text-[#395144] px-2 py-0.5 rounded text-[9px] font-black">2001 - 2010</span>
+                    </div>
+                    <p class="text-xs font-bold text-[#ff7f00] uppercase tracking-wider mb-2">Concepteur Multimédia / Enseignant</p>
+                    <ul class="text-[11px] text-slate-700 space-y-1 leading-snug">
+                        <li>• Enseignement des outils FrameMaker et Word (Licence Pro/Master).</li>
+                        <li>• Production de contenus numériques (Schneider Electric, Sagem...).</li>
+                    </ul>
+                </div>
+
             </div>
 
         </div>
